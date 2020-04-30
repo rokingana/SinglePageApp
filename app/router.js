@@ -1,10 +1,14 @@
-import { routing } from "./routes.js";
-import { default as start } from "./routes.js";
+import { routes } from "./routes.js";
+import defaultRoute from "./routes.js";
 
 function route() {
     
-    window.location.hash = start.hash;
-    start.init();
+
+    const { init } = Object.values(routes).find(
+        ({ hash }) => window.location.hash.startsWith(hash)
+    ) || defaultRoute;
+
+    init();
      
 }
 
