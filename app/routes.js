@@ -3,11 +3,10 @@ import { catChuck } from "./controller/wecome.js";
 import { search } from "./controller/wecome.js";
 
 export default {
-    hash: "#randomChuck",
-    init: getChuck
-}
-
-const routes = {
+    hello: {
+        hash: "#randomChuck",
+        init: getChuck
+    },
     category: {
         hash: "#categoryChuck",
         init: catChuck
@@ -18,6 +17,4 @@ const routes = {
     }
 }
 
-
-export { routes };
 

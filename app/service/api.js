@@ -14,7 +14,7 @@ async function fetchRandomChuck() {
 }
 
 async function fetchCategoryChuck(category) {
-    await console.log('hello');
+    console.log('hello');
     const defaulCat = animal;
     this.category = category || defaulCat;
     

@@ -1,12 +1,8 @@
 import routes from "./routes.js";
-import defaultRoute from "./routes.js";
-
-console.log('wahhhaaa');
-
 
 function route() {
 
-    
+    const { hello: defaultRoute } = routes;
 
     const { init } = Object.values(routes).find(
         ({ hash }) => window.location.hash.startsWith(hash)
